@@ -1,0 +1,15 @@
+<!--pages/playlist/playlist.wxml-->
+<swiper autoplay="true" interval="1500" interval-dots="false" circular="true">
+    <block wx:for="{{lunbotu}}" wx:key="url">
+        <swiper-item>
+            <navigator url="{{item.url}}" hover-class="none">
+                <image src="{{item.image}}" mode="widthFix"></image>
+            </navigator>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="playlist-container" bindtap="goToMusiclist">
+    <block wx:for="{{playlist}}" wx:key="_id">
+        <playlist playlist="{{item}}" data-musicid="{{item._id}}"data-index="{{index}}"></playlist>
+    </block>
+</view>
