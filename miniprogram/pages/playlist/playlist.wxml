@@ -13,3 +13,4 @@
         <playlist playlist="{{item}}" data-musicid="{{item._id}}"data-index="{{index}}"></playlist>
     </block>
 </view>
+<x-musiclist musiclist="{{musiclist}}"></x-musiclist>

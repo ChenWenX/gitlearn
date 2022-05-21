@@ -1,1 +1,48 @@
 /* pages/wo/wo.wxss */
+.page{
+    background-color: black;
+}
+.user {
+    min-height: 100vh;
+    background: #f8f6f6;
+    font-size: 25rpx;
+    overflow: hidden;
+  }
+.userInfo {
+    margin: 0 0 20rpx;
+    padding: 10rpx 0;
+    background: #fff;
+    display: flex;
+  }
+  
+  .userInfo .userInfo_logo {
+    margin: 20rpx;
+    height: 125rpx;
+    width: 125rpx;
+    display: inline-block;
+    background-color: #fff;
+  }
+  
+  .userInfo .userInfo_name {
+    display: flex;
+    margin: 20rpx 0;
+    font-size: 28rpx;
+    letter-spacing: 2rpx;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .userInfo .userInfo_name button {
+    margin: 25rpx 0 0;
+  }
+  .a1{
+      margin: auto;
+      padding: 5rpx;
+      border: 5rpx solid rgb(187, 179, 179);
+      margin-bottom: 50rpx;
+      text-align: center;
+  }
+  .a2{
+      text-align: center;
+  }

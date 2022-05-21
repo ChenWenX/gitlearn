@@ -15,7 +15,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        
+        wx.clearStorage()
         // console.log(options.index)
         // let index=options.index
         let that=this

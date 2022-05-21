@@ -2,17 +2,15 @@
 <view class="player-container" style="background: url({{picUrl}}) center/cover no-repeat;"></view>
 <view class="player-mask"></view>
 <view class="player-info">
-    <view class="player-disc {{isPlaying?'play':' '}}" bindtap="onChangeLyricShow" hidden="{{isLyricShow}}">
+    <view class="player-disc {{isPlaying?'play':' '}}" bind:tap="onCangeLyricShow" hidden="{{isLyricShow}}">
         <image class="playerimg rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}"></image>
     </view>
-    <x-lyric isLyricShow="{{!isLyricShow}}" bindtap="onChangeLyricShow" lyric="{{lyric}}"></x-lyric>
-
-<view class="progress-bar">
-<x-progress-bar bind:musicEnd="onNext"></x-progress-bar>
-</view>
-<view class="control">
-    <text class="iconfont icon-shangyishoushangyige" bindtap="onprev"></text>
-    <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bindtap="toggleplaying"></text>
-    <text class="iconfont icon-xiayigexiayishou" bindtap="onNext"></text>
-</view>
+    <view class="progress-bar">
+        <x-progress-bar bind:musicEnd="onNext"></x-progress-bar>
+    </view>
+    <view class="control">
+        <text class="iconfont icon-shangyishoushangyige" bindtap="onprev"></text>
+        <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}}" bindtap="toggleplaying"></text>
+        <text class="iconfont icon-xiayigexiayishou" bindtap="onNext"></text>
+    </view>
 </view>

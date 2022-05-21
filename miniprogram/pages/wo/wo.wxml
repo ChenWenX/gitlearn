@@ -1,2 +1,23 @@
 <!--pages/wo/wo.wxml-->
-<text>pages/wo/wo.wxml</text>
+<view class="userInfo">
+    <view class="userInfo_logo">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="userInfo_name">
+      <open-data type="userNickName"></open-data>
+    </view>
+</view>
+<view class="a1">
+会员中心
+</view>
+<view class="a1">
+喜欢的歌曲
+</view>
+<view class="a1">
+咨询客服
+</view>
+<view class="a1">
+设置
+</view>
+<view class="a2">------------------推荐歌曲------------------</view>
+<x-musiclist musiclist="{{musiclist}}"></x-musiclist>

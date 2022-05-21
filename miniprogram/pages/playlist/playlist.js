@@ -35,15 +35,25 @@ Page({
         // {"_id":"08560c9e5d042a5d0174f1ea32c4c288","type":0.0,"copywriter":"热门推荐","highQuality":false,"createTime":{"$date":"2019-06-14T23:14:37.097Z"},"id":2.201879658e+09,"alg":"cityLevel_unknow","playCount":1.06749088e+08,"name":"你的青春里有没有属于你的一首歌？","picUrl":"https://p2.music.126.net/wpahk9cQCDtdzJPE52EzJQ==/109951163271025942.jpg","canDislike":true,"trackCount":169.0},
         // {"_id":"08560c9e5d0829820362a79f4b049d2d","alg":"cityLevel_unknow","name":"「乐队的夏天」参赛歌曲合集丨EP04更新","highQuality":false,"picUrl":"http://p2.music.126.net/2WE5C2EypEwLJd2qXFd4cw==/109951164086686815.jpg","trackCount":158.0,"createTime":{"$date":"2019-06-18T00:00:02.553Z"},"copywriter":"热门推荐","playCount":1.5742008e+06,"canDislike":true,"id":2.79477263e+09,"type":0.0}
         ],
+        musiclist: [],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this._getplaylist();
+        // wx.clearStorage()
+    //     this._getplaylist();
+    //     wx.cloud.database().collection('musiclist1').get().then((res)=>{
+    //             this.setData({
+    //                 musiclist:res.data
+    //             })
+    //             this._setMusicLoadlist()
+    //         })
+    // },
+    // _setMusicLoadlist(){
+    //     wx.setStorageSync('musiclist', this.data.musiclist)
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -55,7 +65,16 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this._getplaylist();
+        wx.cloud.database().collection('musiclist1').get().then((res)=>{
+                this.setData({
+                    musiclist:res.data
+                })
+                this._setMusicLoadlist()
+            })
+    },
+    _setMusicLoadlist(){
+        wx.setStorageSync('musiclist', this.data.musiclist)
     },
 
     /**

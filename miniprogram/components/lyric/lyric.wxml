@@ -1,4 +1,0 @@
-<!--components/lyric/lyric.wxml-->
-<scroll-view hidden="isLyricShow" >
-
-</scroll-view>

@@ -1,4 +1,4 @@
 {
-  "usingComponents": {"playlist":"../../components/palylist/playlist"},
+  "usingComponents": {"playlist":"../../components/palylist/playlist","x-musiclist":"../../components/musiclist/musiclist"},
   "enablePullDownRefresh": true
 }

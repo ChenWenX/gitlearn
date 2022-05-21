@@ -1,1 +1,31 @@
 /* pages/fabu/fabu.wxss */
+label{
+    float: left;
+}
+view{
+    /* line-height: 200rpx; */
+    height: 80rpx;
+    width: 100%;
+}
+view input{
+    border: 1px solid black;
+}
+button{
+    width: 100%;
+    margin-top: 10rpx;
+}
+.left{
+    float: left;
+}
+.method{
+    height: 80rpx;
+    width: 100%;
+    padding: 5rpx;
+    text-align: center;
+}
+.right text{
+    border: 5rpx solid black;
+    padding: 20rpx;
+    height: 80rpx;
+    width: 100%;
+}

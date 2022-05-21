@@ -1,2 +1,32 @@
-<!--pages/fabu/fabu.wxml-->
-<text>pages/fabu/fabu.wxml</text>
+<form bindsubmit='loginForm' id="myform">
+    <fieldset>
+        <view class='method'>
+            <text class='left'>存储音乐位置：</text>
+            <view class='right' bindtap='selectMethod'>
+                <text>{{ method }}</text>
+            </view>
+        </view>
+        <view><label for="gs">歌手:</label>
+            <input type="text" id="gs" name="gs" />
+            <br />
+        </view>
+        <view><label for="name">歌名:</label>
+            <input id="name" type="text" name="name" />
+            <br />
+        </view>
+        <view><label for="pic">歌图片链接:</label>
+            <input type="text" id="pic" name="pic" />
+            <br />
+        </view>
+        <view><label for="src">歌曲链接:</label>
+            <input type="text" id="src" name="src" />
+            <br />
+        </view>
+        <view><label for="zj">专辑:</label>
+            <input type="text" id="zj" name="zj" />
+            <br />
+        </view>
+        <button form-type="submit" type="primary">提交</button>
+        <button form-type="reset" type="primary">重置</button>
+    </fieldset>
+</form>
